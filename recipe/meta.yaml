@@ -30,11 +30,13 @@ requirements:
 
 test:
   requires:
-    - pkg-config
+    - pkg-config  # [unix]
+    - msys2-pkg-config  # [win]
   commands:
     - pkg-config --exists fontenc
     - test -f $PREFIX/lib/libfontenc.dylib  # [osx]
     - test -f $PREFIX/lib/libfontenc.so     # [linux]
+    - test -f $PREFIX/lib/libfontenc.dll # [win]
 
 about:
   home: https://www.x.org/
