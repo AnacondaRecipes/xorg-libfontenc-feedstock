@@ -18,8 +18,8 @@ requirements:
     - {{ compiler('c') }}
     - pkg-config  # [unix]
     - make  # [unix]
-    - m2-pkg-config  # [win]
-    - m2-make # [win]
+    - msys2-pkg-config  # [win]
+    - msys2-make # [win]
     - xorg-xorgproto
     - zlib
   host:
