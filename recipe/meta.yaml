@@ -16,8 +16,10 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - pkg-config
-    - make
+    - pkg-config  # [unix]
+    - make  # [unix]
+    - m2-pkg-config  # [win]
+    - m2-make # [win]
     - xorg-xorgproto
     - zlib
   host:
