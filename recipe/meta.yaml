@@ -20,7 +20,7 @@ requirements:
     - pkg-config
     - make
   host:
-    - libzlib {{ libzlib }}
+    - zlib {{ zlib }}
     - xorg-xorgproto {{ xorg_xorgproto }}
   run:
     # bounds through run_exports
