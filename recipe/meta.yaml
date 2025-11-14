@@ -11,15 +11,14 @@ source:
 
 build:
   number: 0
+  skip: true  # [win]
 
 requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - pkg-config  # [unix]
-    - make  # [unix]
-    - msys2-pkg-config  # [win]
-    - msys2-make # [win]
+    - pkg-config
+    - make
     - xorg-xorgproto
     - zlib
   host:
@@ -30,13 +29,11 @@ requirements:
 
 test:
   requires:
-    - pkg-config  # [unix]
-    - msys2-pkg-config  # [win]
+    - pkg-config
   commands:
     - pkg-config --exists fontenc
     - test -f $PREFIX/lib/libfontenc.dylib  # [osx]
     - test -f $PREFIX/lib/libfontenc.so     # [linux]
-    - test -f $PREFIX/lib/libfontenc.dll # [win]
 
 about:
   home: https://www.x.org/
