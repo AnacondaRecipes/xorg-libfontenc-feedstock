@@ -22,10 +22,12 @@ requirements:
     - xorg-xorgproto
     - zlib
   host:
-    - zlib
-    - xorg-xorgproto
+    - libzlib {{ libzlib }}
+    - xorg-xorgproto {{ xorg_xorgproto }}
   run:
-    - zlib
+    # bounds through run_exports
+    - libzlib
+    - xorg-xorgproto
 
 test:
   requires:
