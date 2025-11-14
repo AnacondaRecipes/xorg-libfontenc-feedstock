@@ -19,8 +19,6 @@ requirements:
     - {{ compiler('c') }}
     - pkg-config
     - make
-    - xorg-xorgproto
-    - zlib
   host:
     - libzlib {{ libzlib }}
     - xorg-xorgproto {{ xorg_xorgproto }}
