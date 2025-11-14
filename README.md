@@ -1,13 +1,13 @@
-About <pkg_name>-feedstock
+About xorg-libfontenc-feedstock
 =======================
 
 Feedstock license: [BSD-3-Clause](LICENSE)
 
-Home: <home_url>
+Home: https://www.x.org/
 
-Package license: <pkg_license>
+Package license: https://gitlab.freedesktop.org/xorg/lib/libfontenc/-/blob/master/COPYING
 
-Summary: <pkg_summary>
+Summary: The X.Org font encoding library
 
 
 Current release info
