@@ -24,7 +24,7 @@ requirements:
     - xorg-xorgproto {{ xorg_xorgproto }}
   run:
     # bounds through run_exports
-    - libzlib
+    - zlib
     - xorg-xorgproto
 
 test:
