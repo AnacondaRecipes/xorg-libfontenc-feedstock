@@ -15,19 +15,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-<pkg_name>-green.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Downloads](https://img.shields.io/conda/dn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Version](https://img.shields.io/conda/vn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Platforms](https://img.shields.io/conda/pn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-xorg-libfontenc-green.svg)](https://anaconda.org/anaconda/xorg-libfontenc) | [![Conda Downloads](https://img.shields.io/conda/dn/anaconda/xorg-libfontenc.svg)](https://anaconda.org/anaconda/xorg-libfontenc) | [![Conda Version](https://img.shields.io/conda/vn/anaconda/xorg-libfontenc.svg)](https://anaconda.org/anaconda/xorg-libfontenc)) | [![Conda Platforms](https://img.shields.io/conda/pn/anaconda/xorg-libfontenc.svg)](https://anaconda.org/anaconda/xorg-libfontenc)) |
 
-Installing <pkg_name>
+Installing xorg-libfontenc
 ==================
 
-Installing `<pkg_name>` from the main channel can be achieved by:
+Installing `xorg-libfontenc` from the main channel can be achieved by:
 
 ```
-conda install <pkg_name>
+conda install xorg-libfontenc
 ```
 
-It is possible to list all of the versions of `<pkg_name>` available on your platform with `conda`:
+It is possible to list all of the versions of `xorg-libfontenc` available on your platform with `conda`:
 
 ```
-conda search <pkg_name>
+conda search xorg-libfontenc
 ```
