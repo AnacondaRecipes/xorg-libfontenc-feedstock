@@ -1,45 +1,46 @@
-{% set name = "<PLEASE ADD PKG NAME>" %}
-{% set version = "<PLEASE ADD PKG VERSION>" %}
+{% set name = "xorg-libfontenc" %}
+{% set version = "1.1.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: <sha256>
+  url: https://www.x.org/releases/individual/lib/libfontenc-{{ version }}.tar.xz
+  sha256: "7b02c3d405236e0d86806b1de9d6868fe60c313628b38350b032914aa4fd14c6"
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: True  # [py<38]
+  skip: true  # [win]
 
 requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - pkg-config
+    - make
   host:
-    - python
-    - pip
+    - zlib {{ zlib }}
+    - xorg-xorgproto {{ xorg_xorgproto }}
   run:
-    - python
+    # bounds through run_exports
+    - zlib
+    - xorg-xorgproto
 
 test:
-  imports:
-    - {{ name.replace('-', '.') }}
   requires:
-    - pip
+    - pkg-config
   commands:
-    - pip check
+    - pkg-config --exists fontenc
+    - test -f $PREFIX/lib/libfontenc.dylib  # [osx]
+    - test -f $PREFIX/lib/libfontenc.so     # [linux]
 
 about:
-  home: <PLEASE ADD HOME URL>
-  summary: <PLEASE ADD SUMMARY>
-  description: |
-    <PLEASE ADD DESCRIPTION>
-  license: <PLEASE ADD LICENSE>
-  license_family: <PLEASE ADD LICENSE_FAMILY>
-  license_file: <PLEASE_ADD_LICENSE_FILE>
-  dev_url: <PLEASE ADD DEV URL>
-  doc_url: <PLEASE ADD DOC URL>
-
-extra:
-  recipe-maintainers:
-    - Jrice1317
+  home: https://www.x.org/
+  summary: The X.Org font encoding library
+  license: MIT
+  license_family: MIT
+  license_file: COPYING
+  description: The X.Org font encoding library
+  doc_url: https://www.x.org/wiki/Documentation/
+  dev_url: https://gitlab.freedesktop.org/xorg/lib/libfontenc
